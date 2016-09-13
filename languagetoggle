@@ -1,0 +1,34 @@
+<html>
+    <HEAD>
+		<title>语言切换</title>
+		<meta charset="utf-8">
+    </HEAD>
+
+    <BODY>
+		<button>EN</button>
+		<p class="lan0"></p>
+		<p class="lan1"></p>		
+		<script type="text/javascript" src="jquery-1.11.3.js"></script>
+        <script>
+			var language=[['这是中文。','Zhe shi yingwen +_o .'],['这又是中文。','Zhe you shi yingwen W(￣_￣)W.']];
+			var lang_flag = 0;
+			function Lang(){
+				for(var i=0;i<language.length;i++){
+					$('.lan'+i).html(language[i][lang_flag]);
+				}
+			};
+			Lang();
+			$('button').click(function(){
+				console.log(this.innerHTML);
+				if(this.innerHTML=="EN"){
+					lang_flag=1;
+					this.innerHTML="中";
+				}else{
+					lang_flag=0;
+					this.innerHTML="EN";
+				}
+				Lang();
+			});
+		</script>
+    </BODY>
+</html>
