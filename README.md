@@ -1,2 +1,2 @@
 # languagetoggle
-语言切换
+js实现语言切换
